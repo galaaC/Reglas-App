@@ -72,9 +72,9 @@ function App() {
 
   return (
     <div className="min-h-screen relative overflow-hidden" style={{
-      background: 'radial-gradient(ellipse at center, #ff1493 0%, #8b008b 25%, #4b0082 50%, #2e0033 75%, #000000 100%), linear-gradient(45deg, #000000 0%, #ff1493 25%, #000000 50%, #8b008b 75%, #000000 100%)',
-      backgroundSize: '200% 200%, 300% 300%',
-      animation: 'fluidBackground 12s ease-in-out infinite'
+      background: 'linear-gradient(-45deg, #000000, #ff00ff, #000000, #ff00ff)',
+      backgroundSize: '400% 400%',
+      animation: 'animated-gradient 15s ease infinite'
     }}>
       {/* Floating Hearts */}
       {[...Array(15)].map((_, i) => (
@@ -100,8 +100,8 @@ function App() {
           <div className="text-center">
             <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center mb-2 animate-bounce">
               <img 
-                src="/Imagen de WhatsApp 2025-09-06 a las 00.43.59_37264b21.jpg" 
-                alt="Snoopy Barcelona" 
+                src="/oscar.jpg" 
+                alt="Oscar"
                 className="w-20 h-20 rounded-full object-cover"
               />
             </div>
@@ -116,8 +116,8 @@ function App() {
           <div className="text-center">
             <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center mb-2 animate-bounce" style={{ animationDelay: '0.5s' }}>
               <img 
-                src="/Imagen de WhatsApp 2025-09-06 a las 00.47.51_d31d39ee.jpg" 
-                alt="Snoopy Doctora" 
+                src="/yuritzy.jpg" 
+                alt="Yuritzy"
                 className="w-20 h-20 rounded-full object-cover"
               />
             </div>
@@ -215,12 +215,16 @@ function App() {
       </div>
 
       <style jsx>{`
-        @keyframes fluidBackground {
-          0% { background-position: 0% 50%; }
-          25% { background-position: 100% 0%; }
-          50% { background-position: 100% 100%; }
-          75% { background-position: 0% 100%; }
-          100% { background-position: 0% 50%; }
+        @keyframes animated-gradient {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
         }
         
         .line-clamp-3 {
